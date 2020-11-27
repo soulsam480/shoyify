@@ -1,29 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld />
-  <TestWorld />
+  <ShoyoButton :content="content" />
 </template>
 
-<script>
-import TestWorld from "./components/testworld/TestWorld.vue";
-import HelloWorld from "./components/helloworld/HelloWorld.vue";
-
+<script lang="ts">
+import ShoyoButton from "@/components/ShoyoButton";
 export default {
   name: "App",
   components: {
-    TestWorld,
-    HelloWorld
-  }
+    ShoyoButton,
+  },
+  setup() {
+    const content = "Button";
+    return { content };
+  },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("~shoyo/dist/main.css");
 </style>

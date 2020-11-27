@@ -1,13 +1,13 @@
-import { registerComponent } from '@/utils/plugins';
+import { PluginComponent } from './../../../types/index.d';
 import { App as Vue, Plugin } from "vue";
 import ShoyoButton from "./ShoyoButton.vue";
 
 
-const Plug: Plugin = {
-    install(app: Vue) {
-        registerComponent(app, ShoyoButton)
-    }
+const install: Exclude<Plugin['install'], undefined> = (app: Vue) => {
+    app.component(ShoyoButton.name, ShoyoButton)
 }
 
-export default Plug;
-export { ShoyoButton }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(ShoyoButton as any as PluginComponent).install = install;
+
+export default ShoyoButton

@@ -1,4 +1,6 @@
 module.exports = {
-  pluginOptions: {
+  pluginOptions: {},
+  devServer: {
+    port: 8500,
   },
 };

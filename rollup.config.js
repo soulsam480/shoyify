@@ -180,6 +180,7 @@ if (!argv.format || argv.format === "es") {
     output: {
       format: "esm",
       dir: "dist/esm",
+      preferConst: true,
     },
     plugins: [
       typescript(),
