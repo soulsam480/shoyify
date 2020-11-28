@@ -157,6 +157,7 @@ const mapComponent = (name) => {
         file: `dist/components/${name}/index.ts`,
         exports: "named",
         globals,
+        sourcemap: "inline",
       },
       plugins: [
         typescript(),
@@ -181,6 +182,7 @@ if (!argv.format || argv.format === "es") {
       format: "esm",
       dir: "dist/esm",
       preferConst: true,
+      sourcemap: "inline",
     },
     plugins: [
       typescript(),
@@ -202,6 +204,7 @@ if (!argv.format || argv.format === "es") {
     output: {
       format: "esm",
       file: "dist/shoyify.esm.js",
+      sourcemap: "inline",
     },
     plugins: [
       typescript(),
@@ -221,7 +224,7 @@ if (!argv.format || argv.format === "es") {
   ];
   buildFormats.push(esConfig);
   buildFormats.push(merged);
-  buildFormats = [...buildFormats, ...ind];
+  buildFormats = [...buildFormats /* , ...ind */];
 }
 
 if (!argv.format || argv.format === "iife") {
@@ -235,6 +238,7 @@ if (!argv.format || argv.format === "iife") {
       format: "iife",
       name: "shoyify",
       exports: "named",
+      sourcemap: "inline",
       globals,
     },
     plugins: [
@@ -265,6 +269,7 @@ if (!argv.format || argv.format === "cjs") {
       format: "cjs",
       dir: "dist/cjs",
       exports: "named",
+      sourcemap: "inline",
       globals,
     },
     plugins: [

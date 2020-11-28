@@ -12,6 +12,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": ["webpack-env"],
+    "typeRoots": ["./types"],
     "paths": {
       "@/*": ["src/*"]
     },

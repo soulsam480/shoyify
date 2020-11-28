@@ -1,6 +1,9 @@
-import { DefineComponent, Plugin } from "vue";
+import { Plugin } from "vue";
+import { DefineComponent } from "vue"
 
-export interface PluginComponent extends DefineComponent {
+//todo imports
+
+export interface PluginComponent<T> extends DefineComponent<T> {
     install: Exclude<Plugin['install'], undefined>;
 }
 
@@ -20,7 +23,28 @@ export type ShoyoButtonTypes = "btn"
     | "btn-tea"
     | "btn-cyan";
 
-export type ShoyoButtonSizes = "sm";
+export type ShoyoButtonSizes = "sm" | "block";
 
+export interface ShoyoButtonProps {
+    type: ShoyoButtonTypes;
+    size: ShoyoButtonSizes;
+    content: string;
+    disabled: boolean;
+}
 
-export const ShoyoButton: PluginComponent;
+interface ShoyoButtonInputKeyUp {
+    method: (payload?: KeyboardEvent) => void;
+    modifier: string;
+}
+
+export type KeyUp = ((payload?: KeyboardEvent) => void) | ShoyoButtonInputKeyUp;
+
+export interface ShoyoInputProps {
+    id: string;
+    type: "text" | "email" | "password" | "number";
+    onKeyUp: KeyUp;
+    attrs: Record<string, any>;
+}
+
+export const ShoyoButton: PluginComponent<ShoyoButtonProps>;
+export const ShoyoInput: PluginComponent<ShoyoInputProps>;

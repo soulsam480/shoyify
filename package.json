@@ -93,6 +93,9 @@
     },
     "rules": {}
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

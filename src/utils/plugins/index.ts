@@ -6,6 +6,9 @@ export const registerComponent = (instance: Application, component: Component) =
   }
 };
 
+export const firstCapitalize = (val: string): string => {
+  return val.charAt(0).toUpperCase() + val.slice(1)
+}
 /* export const registerComponentProgrammatic = (
   instance: Application,
   property: string,
