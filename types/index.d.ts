@@ -43,6 +43,7 @@ export interface ShoyoInputProps {
     id: string;
     type: "text" | "email" | "password" | "number";
     onKeyUp: KeyUp;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     attrs: Record<string, any>;
 }
 
