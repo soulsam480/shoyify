@@ -32,12 +32,12 @@ export interface ShoyoButtonProps {
     disabled: boolean;
 }
 
-interface ShoyoButtonInputKeyUp {
+interface ShoyoInputKeyUp {
     method: (payload?: KeyboardEvent) => void;
     modifier: string;
 }
 
-export type KeyUp = ((payload?: KeyboardEvent) => void) | ShoyoButtonInputKeyUp;
+export type KeyUp = ((payload?: KeyboardEvent) => void) | ShoyoInputKeyUp;
 
 export interface ShoyoInputProps {
     id: string;

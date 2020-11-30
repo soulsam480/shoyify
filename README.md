@@ -55,8 +55,8 @@ export default defineComponent({
 - [X] Export Global Plugin
 - [X] Add tree Shaking to  Individual components
 - [X] Add typescript types
+- [X] Add props typings `see issue #1`
 - [ ] Add basic components
-- [ ] Add props typings `This may take long`
 - [ ] More todos......
 
 Inspired from [Shubhadip/vue3-component-library](https://github.com/shubhadip/vue3-component-library) and [Vue Tailwind](vue-tailwind.com)

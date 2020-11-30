@@ -29,7 +29,13 @@
     "lint": "vue-cli-service lint",
     "build:es": "rimraf dist && cross-env NODE_ENV=production rollup --config rollup.config.js --format es",
     "build:js": "rimraf dist && cross-env NODE_ENV=production rollup --config rollup.config.js",
-    "build:js_css": "rimraf dist && cross-env NODE_ENV=production SEP_CSS=true rollup --config rollup.config.js"
+    "build:js_css": "rimraf dist && cross-env NODE_ENV=production SEP_CSS=true rollup --config rollup.config.js",
+    "build:docs": "vuepress build docs/src",
+    "dev:docs": "vuepress dev docs/src",
+    "docs:deploy": "scripts/docs.sh"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1"
   },
   "dependencies": {
     "core-js": "^3.6.5",
