@@ -4,13 +4,16 @@
 set -e
 
 # build
-vuepress build docs/src
+cd docs
+
+yarn generate
 
 # navigate into the build output directory
-cd docs/src/.vuepress/dist
+cd dist
 
 # if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+echo 'shoyify.sambitsahoo.com' > CNAME
+
 
 git init
 git add -A
