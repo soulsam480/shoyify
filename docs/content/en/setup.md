@@ -9,15 +9,45 @@ badge: DOCS WIP
 <alert type="warning">
 shoyify is WIP! Not recommended for production
 </alert>
-<alert type="info">
-shoyify will be released on npm after basic components are added.
+
+
+## From NPM
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  yarn add shoyify
+  ```
+  </code-block>
+
+  <code-block label="NPM">
+
+  ```bash
+  npm install shoyify
+  ```
+  </code-block>
+</code-group>
+
+<alert type="warning">
+
+You need to have latest version of  [`shoyo`](https://shoyo.sambitsahoo.com) as your project dependency for `shoyify` to work!! Install using 👇🏼
+
 </alert>
+<code-group>
+  <code-block label="Yarn" active>
 
-## Clone the repo
+  ```bash
+  yarn add shoyo
+  ```
+  </code-block>
 
-```bash
-git clone https://github.com/soulsam480/shoyify
-```
+  <code-block label="NPM">
+
+  ```bash
+  npm install shoyo
+  ```
+  </code-block>
+</code-group>
 
 ## Usage as Plugin
 

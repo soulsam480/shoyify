@@ -1,25 +1,29 @@
 <template>
-  <ShoyoButton @click="log" :content="content" />
-  <ShoyoInput
-    v-model="content"
-    type="text"
-    id="olo"
-    placeholder="some data"
-    :onKeyUp="log"
-  />
-  <p>{{ content }}</p>
-  <shoyo-button @click="log" :content="content"> </shoyo-button>
+  <s-contain>
+    <SBtn @click="log" :content="content" />
+    <SInput
+      v-model="content"
+      type="text"
+      id="olo"
+      placeholder="some data"
+      :onKeyUp="log"
+    />
+    <p>{{ content }}</p>
+    <s-btn @click="log" :color="'yellow'" :content="content"></s-btn>
+  </s-contain>
 </template>
 
 <script lang="ts">
-import ShoyoButton from '@/components/ShoyoButton';
-import ShoyoInput from '@/components/ShoyoInput';
+import SBtn from '@/components/SBtn/SBtn.vue';
+import SInput from '@/components/SInput/SInput.vue';
+import SContain from '@/components/SContain/SContain.vue';
 import { ref } from 'vue';
 export default {
   name: 'App',
   components: {
-    ShoyoButton,
-    ShoyoInput
+    SBtn,
+    SInput,
+    SContain
   },
   setup() {
     const content = ref('button');

@@ -1,5 +1,6 @@
-import ShoyoButton from "./ShoyoButton"
-import ShoyoInput from "./ShoyoInput"
+import SBtn from "./SBtn"
+import SContain from "./SContain"
+import SInput from "./SInput"
 
 
-export { ShoyoButton, ShoyoInput }
+export { SBtn, SContain, SInput }

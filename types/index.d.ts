@@ -12,20 +12,20 @@ declare const shoyify: Exclude<Plugin["install"], undefined>;
 export default shoyify;
 
 export type ShoyoButtonTypes = "btn"
-    | "btn-red"
-    | "btn-blue"
-    | "btn-indigo"
-    | "btn-purple"
-    | "btn-pink"
-    | "btn-orange"
-    | "btn-yellow"
-    | "btn-green"
-    | "btn-tea"
-    | "btn-cyan";
+    | "red"
+    | "blue"
+    | "indigo"
+    | "purple"
+    | "pink"
+    | "orange"
+    | "yellow"
+    | "green"
+    | "tea"
+    | "cyan";
 
 export type ShoyoButtonSizes = "sm" | "block";
 
-export interface ShoyoButtonProps {
+export interface SBtnProps {
     type: ShoyoButtonTypes;
     size: ShoyoButtonSizes;
     content: string;
@@ -39,7 +39,7 @@ interface ShoyoInputKeyUp {
 
 export type KeyUp = ((payload?: KeyboardEvent) => void) | ShoyoInputKeyUp;
 
-export interface ShoyoInputProps {
+export interface SInputProps {
     id: string;
     type: "text" | "email" | "password" | "number";
     onKeyUp: KeyUp;
@@ -47,5 +47,10 @@ export interface ShoyoInputProps {
     attrs: Record<string, any>;
 }
 
-export const ShoyoButton: PluginComponent<ShoyoButtonProps>;
-export const ShoyoInput: PluginComponent<ShoyoInputProps>;
+export interface SContainProps {
+    type: "c-xl" | "c-lg" | "c-md" | "c-sm" | "c-res" | string;
+}
+
+export const SBtn: PluginComponent<SBtnProps>;
+export const SInput: PluginComponent<ShoyoInputProps>;
+export const SContain: PluginComponent<SContainProps>;

@@ -20,7 +20,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "unpkg": "dist/shoyify.min.js",
+  "unpkg": "dist/shoyify-browser.min.js",
   "files": [
     "dist",
     "types/*.d.ts"

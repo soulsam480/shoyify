@@ -1,8 +1,9 @@
 ---
-title: 'What is Shoyify ?'
+title: Shoyify
 description: 'A Vue 3 component library implementing shoyo'
 position: 1
 category: 'Getting Started'
+menuTitle : What is Shoyify ?
 features:
   - Built for Vue 3 and rolled by Rollup for extreme performance.
   - Prop type Definitions and Intellisense in typescript  projects.

@@ -2,9 +2,8 @@
 title: Typescript Support
 menuTitle: Typescript Support
 description: Intro to components in Shoyify.
-position: 4
+position: 10
 category: FAQ
-badge: DOCS WIP
 ---
 `shoyify` is completely written in `Typescript`. It supports typescript out of the box as the typings are provided in the bundle. 
 

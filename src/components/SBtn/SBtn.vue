@@ -2,9 +2,9 @@
 import { defineComponent, h, PropType, ref, toRefs } from 'vue';
 import { ShoyoButtonSizes, ShoyoButtonTypes } from '../../../types';
 export default defineComponent({
-  name: 'ShoyoButton',
+  name: 'SBtn',
   props: {
-    type: {
+    color: {
       type: String as PropType<ShoyoButtonTypes>,
       default: 'btn'
     },
@@ -22,11 +22,11 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { type, size } = toRefs(props);
-    const changeType = ref<string>(type.value);
+    const { color, size } = toRefs(props);
+    const changeType = ref<string>(color.value);
     const changeClass = ref<string>('');
-    if (type.value !== 'btn') {
-      changeType.value = `btn + ${changeType.value}`;
+    if (color.value !== 'btn') {
+      changeType.value = `btn btn-${changeType.value}`;
     }
 
     changeClass.value = `${size.value} ${changeType.value}`;

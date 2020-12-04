@@ -3,7 +3,7 @@ import { firstCapitalize } from '@/utils/plugins';
 import { defineComponent, h, PropType } from 'vue';
 import { KeyUp } from '../../../types';
 export default defineComponent({
-  name: 'ShoyoInput',
+  name: 'SInput',
   emits: ['shoyo-input', 'shoyo-change', 'update:modelValue'],
   props: {
     id: {
