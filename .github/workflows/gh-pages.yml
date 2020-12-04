@@ -8,9 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: ./docs
+
     steps:
       - uses: actions/checkout@v2
-
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
@@ -25,7 +28,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: cd docs
       - run: yarn
       - run: yarn generate
 
